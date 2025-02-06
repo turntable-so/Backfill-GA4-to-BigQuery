@@ -1,0 +1,13 @@
+[project]
+name = "backfill-ga4-to-bigquery"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "google-analytics-data==0.18.4",
+    "google-auth-oauthlib>=1.2.1",
+    "google-auth==2.27.0",
+    "google-cloud-bigquery>=3.29.0",
+    "google-auth-httplib2>=0.2.0",
+]
