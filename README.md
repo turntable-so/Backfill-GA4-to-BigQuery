@@ -120,7 +120,7 @@ To set up OAuth for a desktop application, you need to create an OAuth client ID
 
 
 ### Step 4: Configuration File
-Fill out and save a `config.json` file with your specific parameters. 
+Fill out and save a `config.json` file as `.config.json` with your specific parameters. 
 Example:
 ```json
 {
@@ -161,7 +161,7 @@ Install necessary Python packages:
 
 ### Step 6: Running the Script
 
-After configuring the `config.json` file and saving the source code with the same name `backfill-ga4.py` , it's time to run the script with the desired flags.
+After configuring the `.config.json` file and saving the source code with the same name `backfill-ga4.py` , it's time to run the script with the desired flags.
 
 - **Execute the Script with Flags**:
   - Use the `%run` command followed by the script name and the desired flag.
@@ -169,7 +169,7 @@ After configuring the `config.json` file and saving the source code with the sam
     ```bash
     %run backfill-ga4.py --yesterday
     ```
-  - For fetching data from the initial fetch date specified in your `config.json`, use:
+  - For fetching data from the initial fetch date specified in your `.config.json`, use:
     ```bash
     %run backfill-ga4.py --initial_fetch
     ```
@@ -192,7 +192,7 @@ After configuring the `config.json` file and saving the source code with the sam
 
 - **Check for Successful Setup**:
   - Upon successful completion of the script, it should indicate that the authentication process is complete and data fetching has started.
-  - Now, you should be able to see the new tables in your Google Analytics BigQuery dataset (`DATASET_ID` specified in your `config.json`).
+  - Now, you should be able to see the new tables in your Google Analytics BigQuery dataset (`DATASET_ID` specified in your `.config.json`).
   - Additionally, the `output.csv` file in your project directory should contain the fetched data.
   - If the tables are visible and the CSV file has data, everything is set up correctly.
     
@@ -225,8 +225,8 @@ This repository now includes a **custom notebook** for exporting **13 of the mos
 1. **Initial Steps**:
    The first three steps (creating a dataset, activating the Analytics API, and setting up OAuth) remain the same as detailed in the [Setup and Installation](#setup-and-installation) section.
 
-2. **Prepare the Configuration File (`config.json`)**:
-   Use the following template for the `config.json` file:
+2. **Prepare the Configuration File (`.config.json`)**:
+   Use the following template for the `.config.json` file:
    ```json
    {
       "CLIENT_SECRET_FILE": "/path/to/your/client_secret.json",
@@ -241,7 +241,7 @@ This repository now includes a **custom notebook** for exporting **13 of the mos
    Replace placeholders with your project-specific details.
 
 3. **Run the Notebook**:
-   - Upload the `config.json` file to the notebook directory.
+   - Upload the `.config.json` file to the notebook directory.
    - Open and execute the cells in the notebook sequentially.
    - During execution, you will be prompted to authorize access. Follow the instructions to complete the OAuth flow.
    - Once authorized, the script will fetch the data and save it to BigQuery and a downloadable CSV.

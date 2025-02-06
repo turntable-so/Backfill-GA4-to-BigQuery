@@ -1,6 +1,6 @@
 
-config.json
-sa.json
+.config.json
+.sa.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
